@@ -15,7 +15,7 @@ When user enters username "suchitest1988@gmail.com"
 And user enters password "Nisha@1234"
 And user clicks on Login button
 Then user gets the title of the page
-And page title should be "Cogmento CRM123"
+And page title should be "Cogmento CRM"
 
 
 

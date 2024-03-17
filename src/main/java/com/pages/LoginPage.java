@@ -43,14 +43,24 @@ public class LoginPage {
 
 	}
 
-	public void enterPassword(String pwd) {
+	public void enterPassword(String pwd1) {
 
-		driver.findElement(password).sendKeys(pwd);
+		driver.findElement(password).sendKeys(pwd1);
 	}
 
 	public void clickOnLogin() {
 
 		driver.findElement(SubmitBtn).click();
+	}
+
+	public ProductsPage doLogin(String un, String pwd) { 
+		
+		System.out.println("Login with " + un + "and" + pwd);
+		driver.findElement(EmailId).sendKeys(un);
+		driver.findElement(password).sendKeys(pwd);
+		driver.findElement(SubmitBtn).click();
+		
+		return new ProductsPage(driver);
 	}
 
 }
